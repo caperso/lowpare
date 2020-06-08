@@ -1,0 +1,25 @@
+{
+  "name": "lowpare",
+  "version": "0.1.0",
+  "description": "lowpare is a js object shallow compare tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caperso/lowpare.git"
+  },
+  "keywords": [
+    "js",
+    "jsobject",
+    "compare"
+  ],
+  "author": "caperso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caperso/lowpare/issues"
+  },
+  "homepage": "https://github.com/caperso/lowpare#readme",
+  "devDependencies": {}
+}

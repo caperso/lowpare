@@ -1,6 +1,6 @@
 {
   "name": "lowpare",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "lowpare is a js object shallow compare tool.",
   "main": "index.js",
   "scripts": {

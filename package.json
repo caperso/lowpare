@@ -21,5 +21,7 @@
     "url": "https://github.com/caperso/lowpare/issues"
   },
   "homepage": "https://github.com/caperso/lowpare#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

@@ -5,7 +5,6 @@ exports.__esModule = true;
  * @param {*} p previous object
  * @param {*} c current object
  * @returns {boolean}
- * TODO: ts是否可直接类型限制为一种
  */
 function lowSame(p, c) {
     if (typeof p !== typeof c) {
@@ -27,6 +26,7 @@ exports.lowSame = lowSame;
  * @param {*} previous previous object
  * @param {*} current current object
  * @returns {boolean}
+ * FALSY ELEMENT REGARD AS EMPTY TRUE
  */
 function lowSameEmpty(p, c) {
     var r = p instanceof Array && c instanceof Array
@@ -37,7 +37,7 @@ function lowSameEmpty(p, c) {
             ? Object.keys(p).length === 0 && Object.keys(c).length === 0
                 ? true
                 : false
-            : p === c
+            : !!c === false && c === p
                 ? true
                 : false;
     return r;

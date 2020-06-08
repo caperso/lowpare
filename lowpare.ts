@@ -1,11 +1,11 @@
+// TODO: ts是否可直接类型限制为一种
 type SimpleType = string | number | boolean | null | undefined;
-type Types = { [propName: string]: any } | any[] | Symbol | SimpleType;
+type Types = { [propName: string]: any } | any[] | Symbol | {} | [];
 /**
  * lowSame Compare two objects-like whether same-content or not
  * @param {*} p previous object
  * @param {*} c current object
  * @returns {boolean}
- * TODO: ts是否可直接类型限制为一种
  */
 export function lowSame<T extends Types>(p: T, c: T): boolean {
   if (typeof p !== typeof c) {
@@ -28,9 +28,9 @@ export function lowSame<T extends Types>(p: T, c: T): boolean {
  * @param {*} previous previous object
  * @param {*} current current object
  * @returns {boolean}
+ * FALSY ELEMENT REGARD AS EMPTY TRUE
  */
-
-export function lowSameEmpty<T>(p: T, c: T): boolean {
+export function lowSameEmpty<T extends Types>(p: T, c: T): boolean {
   let r =
     p instanceof Array && c instanceof Array
       ? p.length === 0 && c.length === 0
@@ -40,7 +40,7 @@ export function lowSameEmpty<T>(p: T, c: T): boolean {
       ? Object.keys(p).length === 0 && Object.keys(c).length === 0
         ? true
         : false
-      : p === c
+      : !!c === false && c === p
       ? true
       : false;
   return r;

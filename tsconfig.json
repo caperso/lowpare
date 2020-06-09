@@ -12,6 +12,6 @@
     "outDir": "./dist",
     "declaration": true
   },
-  "include": ["**.ts"],
-  "exclude": ["example.ts"]
+  "include": ["src"],
+  "exclude": ["src/example.ts"]
 }

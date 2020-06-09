@@ -1,7 +1,7 @@
 import { lowSame, lowSameEmpty } from "./lowpare";
 
-const a = [];
-const b = [];
+const a:any[] = [];
+const b:any[] = [];
 
 console.log(lowSame<Array<string>>(a, b));
 console.log(lowSameEmpty<Array<string>>(a, b));

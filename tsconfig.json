@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["esnext", "DOM", "DOM.Iterable"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "isolatedModules": true,
+    "strict": true,
+    "jsx": "react",
+    "outDir": "./dist",
+    "declaration": true
+  },
+  "include": ["**.ts"],
+  "exclude": ["example.ts"]
+}
